@@ -1,3 +1,12 @@
+app.post("/voice", (req, res) => {
+  res.type("text/xml");
+  res.send(`
+    <Response>
+      <Dial>+966542005950</Dial>
+    </Response>
+  `);
+});
+
 const express = require("express");
 const { google } = require("googleapis");
 const OpenAI = require("openai");
